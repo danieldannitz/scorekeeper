@@ -19,7 +19,7 @@ function wholeProgram() {
     }
   });
 
-  resetButton.addEventListener("click", () => {
+  resetButton.addEventListener("click", function () {
     return (
       (p1ChangeScore = 0),
       (p2ChangeScore = 0),
