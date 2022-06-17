@@ -17,4 +17,10 @@ resetButton.addEventListener("click", () => {
 });
 
 let p1Score = document.querySelector("#p1Score");
-let p2Score = document.querySelector("#p1Score");
+let p2Score = document.querySelector("#p2Score");
+p1Score.innerHTML = "dsadsa 2";
+
+function addDarkmodeWidget() {
+  new Darkmode().showWidget();
+}
+window.addEventListener("load", addDarkmodeWidget);
