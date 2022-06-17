@@ -1,24 +1,25 @@
 const p1Button = document.querySelector("#p1Button");
-p1Button.addEventListener("click", () => {
-  let randomNum = Math.random();
-  console.log(randomNum);
-});
-
 const p2Button = document.querySelector("#p2Button");
-p2Button.addEventListener("click", () => {
-  let randomNum = Math.random();
-  console.log(randomNum);
-});
-
 const resetButton = document.querySelector("#resetButton");
-resetButton.addEventListener("click", () => {
-  let randomNum = Math.random();
-  console.log(randomNum);
+const p1Score = document.querySelector("#p1Score");
+const p2Score = document.querySelector("#p2Score");
+let p1ChangeScore = 0;
+let p2ChangeScore = 0;
+
+p1Button.addEventListener("click", () => {
+  if (p1ChangeScore <= 21) {
+    return (p1Score.innerHTML = `${p1ChangeScore++}`);
+  }
 });
 
-let p1Score = document.querySelector("#p1Score");
-let p2Score = document.querySelector("#p2Score");
-p1Score.innerHTML = "dsadsa 2";
+p2Button.addEventListener("click", () => {
+  if (p2ChangeScore <= 21) {
+    return (p2Score.innerHTML = `${p2ChangeScore++}`);
+  }
+});
+resetButton.addEventListener("click", () => {
+  return (p1Score.innerHTML = "0" && p1ChangeScore == 0);
+});
 
 function addDarkmodeWidget() {
   new Darkmode().showWidget();
