@@ -13,7 +13,7 @@ function wholeProgram() {
     }
   });
 
-  p2Button.addEventListener("click", () => {
+  p2Button.addEventListener("click", function () {
     if (p2ChangeScore <= 21) {
       return (p2Score.innerHTML = `${p2ChangeScore++}`);
     }
