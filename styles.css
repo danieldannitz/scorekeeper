@@ -52,3 +52,7 @@ body {
   filter: brightness(80%);
   transition: filter 0.2s ease-in-out;
 }
+
+#p1Score.active {
+  color: blueviolet;
+}

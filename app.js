@@ -8,18 +8,18 @@ function wholeProgram() {
   let p2ChangeScore = 0;
 
   p1Button.addEventListener("click", () => {
-    if (p1ChangeScore <= 21) {
+    while (p1ChangeScore <= 21) {
       return (p1Score.innerHTML = `${p1ChangeScore++}`);
     }
   });
 
-  p2Button.addEventListener("click", function () {
+  p2Button.addEventListener("click", () => {
     if (p2ChangeScore <= 21) {
       return (p2Score.innerHTML = `${p2ChangeScore++}`);
     }
   });
 
-  resetButton.addEventListener("click", function () {
+  resetButton.addEventListener("click", () => {
     return (
       (p1ChangeScore = 0),
       (p2ChangeScore = 0),
@@ -27,6 +27,10 @@ function wholeProgram() {
       (p2Score.innerHTML = "0")
     );
   });
+
+  if (p1ChangeScore === 18) {
+    p1Score.classList.add("active");
+  }
 }
 wholeProgram();
 
